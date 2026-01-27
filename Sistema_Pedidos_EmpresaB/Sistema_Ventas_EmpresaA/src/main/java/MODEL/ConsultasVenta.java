@@ -6,8 +6,6 @@ import java.util.*;
 import javax.swing.table.DefaultTableModel;
 
 public class ConsultasVenta {
-
-    // Ya no necesitamos cargar el archivo .properties en el constructor
     public ConsultasVenta() {
         System.out.println("✅ ConsultasVenta inicializada con ConsultasSQL centralizado.");
     }
@@ -154,4 +152,5 @@ public class ConsultasVenta {
             }
         } catch (SQLException e) { return false; }
     }
+
 }
