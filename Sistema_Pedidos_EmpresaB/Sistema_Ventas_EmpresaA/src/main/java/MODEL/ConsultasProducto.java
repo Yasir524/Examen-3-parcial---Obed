@@ -11,8 +11,6 @@ public class ConsultasProducto {
     public ConsultasProducto() {
         this.con = Conexion.getConexion();
     }
-
-    // Método que causaba el error de columna
     public double getPrecio(String id) {
         double precio = 0;
         // Usamos la constante centralizada
@@ -75,7 +73,6 @@ public class ConsultasProducto {
         }
         return lista;
     }
- // Dentro de ConsultasProducto.java
     public boolean crear(String id, String nom, String des, double pre, int sto) {
         try (PreparedStatement ps = con.prepareStatement(ConsultasSQL.PROD_INSERT)) {
             ps.setString(1, id); ps.setString(2, nom); ps.setString(3, des);
@@ -96,14 +93,12 @@ public class ConsultasProducto {
             return false;
         }
     }
-
     public boolean borrar(String id) {
         try (PreparedStatement ps = con.prepareStatement(ConsultasSQL.PROD_DELETE)) {
             ps.setString(1, id);
             return ps.executeUpdate() > 0;
         } catch (SQLException e) { return false; }
     }
-
     public int getStock(String id) {
         try (PreparedStatement ps = con.prepareStatement(ConsultasSQL.PROD_STOCK)) {
             ps.setString(1, id);
