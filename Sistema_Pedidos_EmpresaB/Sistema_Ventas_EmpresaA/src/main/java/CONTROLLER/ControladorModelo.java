@@ -14,14 +14,11 @@ public class ControladorModelo {
         this.consultasCliente = new ConsultasCliente();
         this.consultasVenta = new ConsultasVenta();
     }
-
     // Métodos delegados de Producto
     public DefaultTableModel leerProductos() { return consultasProducto.leer(); }
     public boolean crearProducto(String id, String nom, String des, double pre, int sto) {
         return consultasProducto.crear(id, nom, des, pre, sto);
     }
-    
- // En CONTROLLER.ControladorModelo.java
     public boolean actualizarProducto(String id, String nom, String des, double pre, int sto) {
         return consultasProducto.actualizar(id, nom, des, pre, sto);
     }
@@ -48,4 +45,5 @@ public class ControladorModelo {
     public boolean eliminarVenta(String id) { return consultasVenta.eliminarVenta(id); }
 
 	
+
 }
