@@ -99,7 +99,6 @@ public class ControladorPrincipal implements ActionListener {
             JOptionPane.showMessageDialog(vista, "❌ Error: Datos numéricos inválidos");
         }
     }
- // En CONTROLLER.ControladorPrincipal.java
     private void actualizarProducto() {
         try {
             String id = vista.txtIdProd.getText();
@@ -234,4 +233,5 @@ public class ControladorPrincipal implements ActionListener {
         vista.tablaVentasHistorial.setModel(cModelo.leerVentas());
         cVista.actualizarCombos(cModelo.obtenerListaClientes(), cModelo.obtenerListaProductos());
     }
+
 }
