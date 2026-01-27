@@ -9,7 +9,6 @@ public class ConsultasCliente {
     private Connection con;
 
     public ConsultasCliente() {
-        // Obtenemos la conexión directamente sin intentar cargar el .properties
         this.con = Conexion.getConexion();
     }
 
@@ -72,4 +71,5 @@ public class ConsultasCliente {
             return ps.executeUpdate() > 0;
         } catch (SQLException e) { return false; }
     }
+
 }
