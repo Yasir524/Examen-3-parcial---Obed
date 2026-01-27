@@ -92,7 +92,7 @@ public class VistaPrincipal extends JFrame {
         comboProductos = new JComboBox<>();
         comboClientes = new JComboBox<>();
         txtPrecioCarrito = new JTextField(10);
-        txtPrecioCarrito.setEditable(false); // El precio lo pone el sistema
+        txtPrecioCarrito.setEditable(false); 
         txtCantidadCarrito = new JTextField("1", 5);
         lblTotalCarrito = new JLabel("TOTAL: $0.00");
         lblTotalCarrito.setFont(new Font("Arial", Font.BOLD, 18));
@@ -171,4 +171,5 @@ public class VistaPrincipal extends JFrame {
         
         return panel;
     }
+
 }
